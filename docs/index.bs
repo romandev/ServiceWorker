@@ -74,8 +74,6 @@ spec: html; urlPrefix: https://html.spec.whatwg.org/multipage/
             text: ancestor origins list; for: Location; url: concept-location-ancestor-origins-list
         urlPrefix: syntax.html
             text: delay the load event; for: document; url: delay-the-load-event
-        urlPrefix: semantics.html
-            text: serviceworker; for: html; url: link-type-serviceworker
 
 spec: fetch; urlPrefix: https://fetch.spec.whatwg.org/
     type: dfn
@@ -1749,7 +1747,7 @@ spec: webappsec-referrer-policy; urlPrefix: https://w3c.github.io/webappsec-refe
 <section>
   <h2 id="link-type-serviceworker">Link type "`serviceworker`"</h2>
 
-  A [=/service worker registration=] and its [=service worker registration/scope url=] are created by a <dfn id="dfn-serviceworker-link">serviceworker link</dfn>, which is declared using a <a href="#serviceworker-link-header">"serviceworker" `Link` header</a> or a <{link}> element whose <{link/rel}> attribute contains the keyword "<code>[=html/serviceworker=]</code>".
+  A [=/service worker registration=] and its [=service worker registration/scope url=] are created by a <dfn id="dfn-serviceworker-link">serviceworker link</dfn>, which is declared using a <a href="#serviceworker-link-header">"serviceworker" `Link` header</a> or a <{link}> element whose <{link/rel}> attribute contains the keyword "<{link/rel/serviceworker}>".
 
   <section>
     <h3 id="serviceworker-link-header">Declaring a "serviceworker" <code>Link</code> header</h3>
