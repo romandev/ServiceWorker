@@ -349,7 +349,7 @@ spec: webappsec-referrer-policy; urlPrefix: https://w3c.github.io/webappsec-refe
                     <dt>Otherwise</dt>
                     <dd>a new {{Client}} object that represents |incumbentGlobal|'s associated worker
                 </dd>
-            1. Let |origin| be the [=Unicode serialization of an origin|Unicode serialization=] of |incumbentSettings|'s [=environment settings object/origin=].
+            1. Let |origin| be the [=serialization of an origin|serialization=] of |incumbentSettings|'s [=environment settings object/origin=].
             1. Let |destination| be the {{ServiceWorkerGlobalScope}} object associated with |serviceWorker|.
             1.  Let |deserializeRecord| be <a abstract-op>StructuredDeserializeWithTransfer</a>(|serializeWithTransferResult|, |destination|'s [=global object/Realm=]).
 
@@ -957,7 +957,7 @@ spec: webappsec-referrer-policy; urlPrefix: https://w3c.github.io/webappsec-refe
         1. If |destination| is null, <a>throw</a> an "{{InvalidStateError}}" exception.
         1. Let |serializeWithTransferResult| be <a abstract-op>StructuredSerializeWithTransfer</a>(|message|, |transfer|). Rethrow any exceptions.
         1. Add a <a>task</a> that runs the following steps to |destination|'s [=ServiceWorkerContainer/client message queue=]:
-            1. Let |origin| be the [=Unicode serialization of an origin|Unicode serialization=] of |sourceSettings|'s [=environment settings object/origin=].
+            1. Let |origin| be the [=serialization of an origin|serialization=] of |sourceSettings|'s [=environment settings object/origin=].
             1. Let |source| be a {{ServiceWorker}} object, which represents the [=ServiceWorkerGlobalScope/service worker=] associated with |sourceSettings|'s [=environment settings object/global object=].
             1. Let |deserializeRecord| be <a abstract-op>StructuredDeserializeWithTransfer</a>(|serializeWithTransferResult|, |destination|'s [=relevant Realm=]).
 
